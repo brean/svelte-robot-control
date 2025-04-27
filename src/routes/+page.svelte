@@ -9,8 +9,8 @@ let position: [x: number, y: number] = $state([0, 0]);
 // connect to get WebRTC video stream directly
 // peer connection
 
-const config: RTCConfiguration = {}
-let pc: RTCPeerConnection | undefined
+const config: RTCConfiguration = {};
+let pc: RTCPeerConnection | undefined;
 let videoElem: HTMLVideoElement;
 
 // data channel
@@ -24,11 +24,11 @@ function createPeerConnection() {
 
   // register some listeners to help debugging
   pc.addEventListener('icegatheringstatechange', () => {
-      console.log(pc?.iceGatheringState);
+    console.log(pc?.iceGatheringState);
   }, false);
 
   pc.addEventListener('iceconnectionstatechange', () => {
-      console.log(pc?.iceConnectionState);
+    console.log(pc?.iceConnectionState);
   }, false);
 
   pc.addEventListener('signalingstatechange', () => {
